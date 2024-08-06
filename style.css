@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  
+  font-family: Arial;
+  padding: 10px;
+  background-image: url('images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment:  fixed;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 50px;
+  color: tomato;
+}
+@keyframes cardborder {
+    0% { border-bottom-color: coral; }
+    16.66% { border-bottom-color: coral; }
+    16.67% { border-bottom-color: darkorchid; }
+    33.32% { border-bottom-color: darkorchid; }
+    33.33% { border-bottom-color: dodgerblue; }
+    49.98% { border-bottom-color: dodgerblue; }
+    50% { border-bottom-color: aquamarine; }
+    66.65% { border-bottom-color: aquamarine; }
+    66.66% { border-bottom-color: tomato; }
+    83.31% { border-bottom-color: tomato; }
+    83.32% { border-bottom-color: darkorange; }
+    99.99% { border-bottom-color: darkorange; }
+    100% { border-bottom-color: coral; }
+}
+
+.header p {
+  font-weight: bold;
+  color: white;
+  text-shadow: 1.5px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Style the topnav links */
+.topnav a {
+  cursor: pointer;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  text-decoration: underline;
+  background: linear-gradient(45deg, darkorange, tomato);
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  align-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.fakeimg img {
+  max-width: 100%;
+  width: 250px;
+}
+
+/* Add a card effect for articles */
+.card {
+  animation: cardborder 90s infinite ease-in-out;
+  transition: border-bottom-color 0.9s ease-in-out;
+  border-bottom: 5px solid;
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  color: whitesmoke;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+.footer a {
+  cursor: pointer;
+  text-decoration: underline;
+  color: ghostwhite;
+}
+#about {
+  display: block;
+  padding: 25px;
+  border: 2px solid;
+  font-size: 20px;
+  border-bottom-left-radius: 20px;
+  transition: 0.5s ease;
+}
+#about p {
+  text-align: left;
+}
+#about:hover {
+  color: tomato;
+  border-color: tomato;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#cardabout {
+  border-bottom: 5px solid;
+}
+#about a {
+  cursor: pointer;
+  font-style: italic;
+  color:whitesmoke;
+  transition: 0.3s ease;
+}
+#about a:hover {
+  font-style: normal;
+}
+#contact {
+  display: block;
+  justify-content: space-between;
+  align-content: center;
+}
+#contact input {
+  border-radius: 5px;
+  border-style: none;
+  transition: 0.3s ease;
+  color: whitesmoke;
+  background-color: rgba(250, 250, 250, 0.1);
+  padding: 10px;
+  font-size: 16px;
+  width:100%;
+  margin: 10px auto;
+}
+#contact input:hover {
+  border: 1px solid blueviolet;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#message {
+  height: 100px;
+}
+#contact button {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 5px;
+  color: aquamarine;
+  height: 50px;
+  width: 80px;
+  border:none;
+  background-color: rgb(0, 0, 0, 0.3);
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.5s ease;
+}
+#contact {
+  border-bottom: 5px solid;
+}
+#contact button:hover {
+  border-bottom: 5px dotted aquamarine;
+}
+.social ul {
+  justify-content: space-between;
+  display: inline;
+}
+.social ul li{
+  padding: 10px 5px;
+  display:inline-block;
+  font-size: 18px;
+  list-style: none;
+}
+
+.social ul a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+
+}
+#helppg {
+  border-bottom: 5px solid darkviolet;
+}
+#errpg {
+  background-color: rgba(250, 250, 250, 1);
+  font-size: 20px;
+  text-align: center;
+  border-bottom: 5px solid;
+}
+#errpg a {
+  cursor: pointer;
+  text-decoration: none;
+  color: dodgerblue;
+}
+#errpg h2 {
+  color: crimson;
+  font-size: 40px;
+}
+#errpg h3 {
+  color: coral;
+}
+#errpg p {
+  color: black;
+}
+.readmore {
+  text-align: center;
+  cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 1s ease;
+    font-family: Arial, sans-serif;
+    position: relative;
+    border: 2px solid tomato;
+    font-size: 16px;
+    
+}
+
+.readmore::after {
+    content: "Read More";
+    display: inline-block;
+    transition: content 0.4s ease;
+}
+
+.readmore:hover::after {
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+.readmore:hover { background-color: tomato;}
+.header h1 a {
+  cursor: pointer;
+  text-decoration: none;
+  color: tomato;
+  transition: 0.5s ease;
+}
+.header h1 a:hover {
+  color:darkorange;
+}
+#cardauthor {
+  border-bottom: none;
+}
+.author {
+  
+}
+.card p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
